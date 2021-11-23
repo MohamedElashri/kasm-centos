@@ -67,6 +67,7 @@ RUN mkdir -p $HOME/Desktop
 ### (should be nss_wrapper), and yum would just ignore it. Thus, a necessary
 ### package would be missing. With skip_missing_names_on_install, yum will exit
 ### with 1 exit code and that will stop image building.
+RUN yum install yum-utils
 RUN yum-config-manager --setopt=skip_missing_names_on_install=False --save
 
 ### Install custom fonts
