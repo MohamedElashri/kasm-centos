@@ -56,7 +56,7 @@ then
   elif [ "$DISTRO" = "centos" ]; then
     yum install -y epel-release
     disable_epel_nss_wrapper_that_breaks_firefox
-    yum install xfce -y
+    yum groupinstall -y "Xfce"
     wget https://rpmfind.net/linux/centos/8-stream/AppStream/aarch64/os/Packages/xterm-331-1.el8_3.2.aarch64.rpm
     yum localinstall -y xterm*.rpm
     rm xterm*.rpm
