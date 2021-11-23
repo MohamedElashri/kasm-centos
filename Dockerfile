@@ -1,4 +1,4 @@
-ARG BASE_IMAGE="centos:centos7"
+ARG BASE_IMAGE="centos:centos8"
 
 FROM $BASE_IMAGE AS install_tools
 ARG DISTRO=centos
@@ -16,8 +16,6 @@ RUN tar -xzf kasm-squid-builder_centos.tar.gz -C /
 
 FROM install_tools
 
-MAINTAINER Kasm Tech "info@kasmweb.com"
-LABEL "com.kasmweb.image"="true"
 
 ### Environment config
 ARG START_XFCE4=0
