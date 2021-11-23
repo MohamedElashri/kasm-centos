@@ -1,5 +1,5 @@
 ARG BASE_TAG="develop"
-FROM kasmweb/core-centos-7:$BASE_TAG
+FROM melashri/kasm-centos:latest
 USER root
 
 ENV DISTRO=centos
