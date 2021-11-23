@@ -4,7 +4,7 @@ set -e
 echo "Install some common tools for further installation"
 if [ "${DISTRO}" == "centos" ] ; then
   yum install -y vim wget net-tools bzip2 python3
-  wget http://mirror.ghettoforge.org/distributions/gf/el/7/gf/x86_64/wmctrl-1.07-17.gf.el7.x86_64.rpm
+  wget http://mirror.ghettoforge.org/distributions/gf/el/7/gf/SRPMS/wmctrl-1.07-17.gf.el7.src.rpm
   yum localinstall -y wmctrl*.rpm
   rm wmctrl*.rpm
 else
